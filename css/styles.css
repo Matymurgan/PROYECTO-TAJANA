@@ -168,8 +168,8 @@ h1, h2, h3 {
   margin:0 auto 17px;
 }
 
-.hero__tagline 2{
-  color: var(orange);
+.hero__tagline2{
+  color: var(--cream-soft);
   font-size:clamp(1rem,2vw,1.25rem);
   text-align:center;
   max-width:950px;
