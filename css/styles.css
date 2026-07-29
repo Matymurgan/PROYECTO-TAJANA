@@ -165,7 +165,7 @@ h1, h2, h3 {
   font-size:clamp(1rem,2vw,1.25rem);
   text-align:center;
   max-width:950px;
-  margin:0 auto 18px;
+  margin:0 auto 17px;
 }
 .hero__pills{
     display:flex;
