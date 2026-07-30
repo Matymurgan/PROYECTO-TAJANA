@@ -7,7 +7,8 @@
   --cream-soft: #efe8d9;
   --orange: #e85c1f;   /* fitness */
   --steel: #2b5170;    /* taekwondo */
-  --wine: #7a3145;     /* spa */
+  --wine: #6d2338;     /* spa — tomado de la cartelería de depilación */
+  --wine-soft: #d8a8ae; /* rosa empolvado de la cartelería, para acentos suaves */
   --line: rgba(21, 19, 15, 0.12);
 
   --font-display: "Bebas Neue", sans-serif;
@@ -35,9 +36,7 @@ h1, h2, h3 {
   margin: 0;
 }
 
-/* =========================================================
-   NAV
-   ========================================================= */
+/* NAV */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -101,10 +100,8 @@ h1, h2, h3 {
 }
 .nav.is-scrolled .nav__toggle span { background: var(--ink); }
 
-/* =========================================================
-   HERO
-   ========================================================= */
-  .hero {
+/* HERO */
+.hero {
   position: relative;
   height: 100svh;
   min-height: 560px;
@@ -112,7 +109,6 @@ h1, h2, h3 {
   align-items: flex-end;
   overflow: hidden;
 }
-
 .hero__img {
   position: absolute;
   inset: 0;
@@ -120,14 +116,12 @@ h1, h2, h3 {
   height: 100%;
   object-fit: cover;
 }
-
 .hero__scrim {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(0deg, rgba(21,19,15,.92) 0%, rgba(21,19,15,.45) 45%, rgba(21,19,15,.35) 100%);
 }
-
 .hero__content {
   position: relative;
   z-index: 2;
@@ -136,7 +130,6 @@ h1, h2, h3 {
   margin: 0 auto;
   padding: 0 40px 150px;
 }
-
 .hero__logos{
   display:flex;
   justify-content:center;
@@ -145,7 +138,6 @@ h1, h2, h3 {
   margin-top: 140px;
   margin-bottom:35px;
 }
-
 .hero__logo{
   width:240px;
   height:240px;
@@ -155,11 +147,9 @@ h1, h2, h3 {
   box-shadow:0 15px 35px rgba(0,0,0,.45);
   transition:.3s;
 }
-
 .hero__logo:hover{
   transform:scale(1.08);
 }
-
 .hero__tagline{
   color: var(--cream-soft);
   font-size:clamp(1rem,2vw,1.25rem);
@@ -167,7 +157,6 @@ h1, h2, h3 {
   max-width:950px;
   margin:0 auto 17px;
 }
-
 .hero__tagline2{
   color: var(--cream-soft);
   font-size:clamp(1rem,2vw,1.25rem);
@@ -195,35 +184,20 @@ h1, h2, h3 {
     color:#fff;
     transition:.3s;
     border:none;
-
 }
-
-.pill--fitness{
-    background:#F26522;
-}
-
-.pill--taekwondo{
-    background:#2D5C88;
-}
-
-.pill--spa{
-    background:#8B2E4A;
-}
-
+.pill--fitness{ background:var(--orange); }
+.pill--taekwondo{ background:var(--steel); }
+.pill--spa{ background:var(--wine); }
 .pill:hover{
     transform:translateY(-4px);
     filter:brightness(1.15);
 }
 
-
-
-/* =========================================================
-   SECTION BLOCKS (shared)
-   ========================================================= */
+/* SECTION BLOCKS (shared) */
 .block {
   position: relative;
   padding: 96px 28px 88px;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 76px;
 }
 .block__inner {
   max-width: 880px;
@@ -241,7 +215,7 @@ h1, h2, h3 {
 .block__title {
   font-size: clamp(2.1rem, 5vw, 3.2rem);
   margin-bottom: 18px;
-  max-width: 40ch;
+  max-width: 16ch;
 }
 .block__lede {
   font-size: 1.08rem;
@@ -249,8 +223,6 @@ h1, h2, h3 {
   margin: 0 0 40px;
   opacity: 0.85;
 }
-
-/* the orange "kettlebell arc" motif, echoing the logo, marks the start of each block */
 .block__arc {
   position: absolute;
   top: 0; left: 50%;
@@ -263,9 +235,50 @@ h1, h2, h3 {
 .block--fitness .block__eyebrow, .block--fitness .card__title { color: var(--orange); }
 .block--fitness .block__arc { background: var(--orange); }
 
-.block--taekwondo { background: var(--cream-soft); }
-.block--taekwondo .block__eyebrow, .block--taekwondo .card__title { color: var(--steel); }
+.block--taekwondo {
+  position: relative;
+  background: #0c1116;
+  color: var(--cream);
+}
 .block--taekwondo .block__arc { background: var(--steel); }
+.block--taekwondo .block__inner { text-align: center; }
+.block--taekwondo .block__eyebrow { color: #9cc6e6; }
+.block--taekwondo .card__title { color: var(--steel); }
+
+.taekwondo-hero {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+.taekwondo-hero__image {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+.taekwondo-hero__text { margin-bottom: 40px; }
+.taekwondo-hero__text .block__title {
+  color: var(--cream);
+  max-width: 100%;
+  margin: 0 auto 16px;
+}
+.taekwondo-hero__text .block__lede {
+  max-width: 60ch;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+.block--taekwondo .grid-2,
+.block--taekwondo .card--wide { text-align: left; }
+.block--taekwondo .card {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+  color: var(--cream);
+}
+.block--taekwondo .schedule td { border-bottom-color: rgba(255,255,255,0.14); }
+.block--taekwondo .tag-list li { background: rgba(255,255,255,0.14); }
+.block--taekwondo .profile__role { opacity: 0.8; }
 
 .block--spa { background: var(--ink); color: var(--cream); }
 .block--spa .block__eyebrow { color: #e8a6b8; }
@@ -274,9 +287,7 @@ h1, h2, h3 {
 .block--spa .block__arc { background: var(--wine); }
 .block--spa .card { background: rgba(246, 241, 231, 0.06); border-color: rgba(246, 241, 231, 0.14); }
 
-/* =========================================================
-   CARDS / GRID / TABLES
-   ========================================================= */
+/* CARDS / GRID / TABLES */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -295,7 +306,6 @@ h1, h2, h3 {
   font-size: 1.3rem;
   margin-bottom: 14px;
 }
-
 .schedule { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 .schedule td { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .schedule td:last-child { text-align: right; font-weight: 600; }
@@ -303,9 +313,10 @@ h1, h2, h3 {
 
 .profile { display: flex; align-items: center; gap: 14px; }
 .profile__avatar {
-  width: 56px; height: 56px;
+  width: 64px; height: 64px;
   border-radius: 50%;
   flex: none;
+  object-fit: cover;
   background: linear-gradient(135deg, var(--line), rgba(0,0,0,0.04));
 }
 .profile__name { margin: 0; font-weight: 700; }
@@ -330,10 +341,47 @@ h1, h2, h3 {
 .price-table th, .price-table td { padding: 12px 8px; text-align: left; border-bottom: 1px solid rgba(246,241,231,0.14); }
 .price-table th { font-weight: 700; opacity: 0.7; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
 .price-table td:not(:first-child), .price-table th:not(:first-child) { text-align: right; }
+.block--fitness .price-table td,
+.block--taekwondo .price-table td { border-bottom-color: var(--line); }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.promo {
+  background: rgba(246, 241, 231, 0.06);
+  border: 1px solid rgba(246, 241, 231, 0.14);
+  border-radius: 14px;
+  padding: 18px;
+}
+.promo__name {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  color: var(--wine-soft);
+}
+.promo__detail {
+  margin: 0 0 12px;
+  font-size: 0.88rem;
+  opacity: 0.75;
+  line-height: 1.4;
+}
+.promo__price {
+  margin: 0;
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.95rem;
+}
+.card--booking { text-align: center; }
+.card--booking .pill { font-size: 1rem; padding: 12px 24px; }
+
+/* FOOTER */
 .footer {
   background: var(--ink);
   color: var(--cream);
@@ -343,11 +391,42 @@ h1, h2, h3 {
 }
 .footer__logo { width: 90px; margin: 0 auto 20px; border-radius: 8px; }
 .footer__info p { margin: 4px 0; opacity: 0.8; font-size: 0.95rem; }
+.footer__info a { transition: opacity 0.2s ease, color 0.2s ease; }
+.footer__info a:hover { opacity: 1; color: var(--orange); }
 .footer__copy { margin-top: 28px; font-size: 0.8rem; opacity: 0.5; }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+/* BOTONES FLOTANTES */
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.floating-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.floating-btn svg { width: 26px; height: 26px; }
+.floating-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.34);
+}
+.floating-btn--whatsapp { background: #25d366; }
+.floating-btn--instagram {
+  background: radial-gradient(circle at 30% 110%, #ffdb73 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+/* RESPONSIVE */
 @media (max-width: 760px) {
   .grid-2 { grid-template-columns: 1fr; }
   .nav__links {
@@ -371,98 +450,29 @@ h1, h2, h3 {
   }
   .nav__links a { color: var(--ink) !important; text-shadow: none !important; width: 100%; }
   .nav__toggle { display: flex; }
+
+  .hero__logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+  }
+  .hero__logo {
+    width: 84px;
+    height: 84px;
+    max-width: 26vw;
+  }
+
+  .taekwondo-hero__image { max-height: 280px; }
+}
+
+@media (max-width: 380px) {
+  .hero__logo { width: 68px; height: 68px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero__scroll span { animation: none; }
   .pill:hover { transform: none; }
-}
-/* =========================================================
-   TAEKWONDO — FOTO Y TEXTO SUPERPUESTO
-   ========================================================= */
-
-/* Contenedor de la imagen */
-.taekwondo-hero {
-  position: relative;
-  width: 100%;
-  margin-top: 40px;
-  overflow: visible;
-}
-
-/* Imagen */
-.taekwondo-hero__image {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  object-position: center center;
-  border-radius: 26px;
-}
-
-/* Texto que sale desde el borde inferior de la foto */
-.taekwondo-hero__text {
-  position:relative;
-  z-index: 2;
-
-  width: 300%;
-  max-width: 200%;
-
-  margin: -50px auto 90;
-
-  padding: 10px 90px;
-
-  background: var(--cream-soft);
-
-  border-radius: 25px;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-/* Mantiene el tamaño y estilo original del título */
-.taekwondo-hero__text .block__title {
-  margin-top: 0;
-  margin-bottom: 18px;
-}
-
-/* Mantiene la descripción como estaba */
-.taekwondo-hero__text .block__lede {
-  margin-bottom: 0;
-}
-
-/* Espacio entre el texto superpuesto y las tarjetas */
-.taekwondo-hero__text + .grid-2 {
-  margin-top: 60px;
-}
-
-
-/* =========================================================
-   TAEKWONDO — RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 760px) {
-
-  .taekwondo-hero__image {
-    height: 400px;
-  }
-
-  .taekwondo-hero__text {
-    width: 90%;
-    margin-top: -50px;
-    padding: 24px 25px;
-  }
-
-}
-
-@media (max-width: 480px) {
-
-  .taekwondo-hero__image {
-    height: 350px;
-  }
-
-  .taekwondo-hero__text {
-    width: 92%;
-    margin-top: -30px;
-    padding: 22px 20px;
-  }
-
 }
