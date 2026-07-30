@@ -306,6 +306,15 @@ h1, h2, h3 {
   font-size: 1.3rem;
   margin-bottom: 14px;
 }
+
+.schedule__days {
+  margin: -6px 0 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.65;
+}
 .schedule { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 .schedule td { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .schedule td:last-child { text-align: right; font-weight: 600; }
@@ -378,6 +387,7 @@ h1, h2, h3 {
   border-radius: 100px;
   font-size: 0.95rem;
 }
+
 .card--booking { text-align: center; }
 .card--booking .pill { font-size: 1rem; padding: 12px 24px; }
 
@@ -394,6 +404,15 @@ h1, h2, h3 {
 .footer__info a { transition: opacity 0.2s ease, color 0.2s ease; }
 .footer__info a:hover { opacity: 1; color: var(--orange); }
 .footer__copy { margin-top: 28px; font-size: 0.8rem; opacity: 0.5; }
+
+.footer__map {
+  max-width: 700px;
+  margin: 32px auto 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(246, 241, 231, 0.18);
+}
+.footer__map iframe { display: block; }
 
 /* BOTONES FLOTANTES */
 .floating-buttons {
