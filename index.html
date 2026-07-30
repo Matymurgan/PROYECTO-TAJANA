@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TAJANA FITNESS — Fitness · Taekwondo · Spa</title>
   <meta name="description" content="TAJANA FITNESS: musculación y clases de fitness, taekwondo y depilación láser definitiva.">
+
+  <!-- Vista previa al compartir el link (WhatsApp, Instagram, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tajana Fitness — Fitness · Taekwondo · Spa">
+  <meta property="og:description" content="Gimnasio de barrio en José C. Paz: clases de fitness/funcional, taekwondo Las Máquinas y depilación láser definitiva. Cercanía y seguimiento personalizado.">
+  <!-- COMPLETAR: reemplazar TU-URL-DE-VERCEL por la URL real una vez publicada, por ej. https://proyecto-tajana.vercel.app -->
+  <meta property="og:image" content="https://TU-URL-DE-VERCEL/assets/logo.webp">
+  <meta property="og:url" content="https://TU-URL-DE-VERCEL">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tajana Fitness — Fitness · Taekwondo · Spa">
+  <meta name="twitter:description" content="Gimnasio de barrio en José C. Paz: fitness/funcional, taekwondo y depilación láser definitiva.">
+  <meta name="twitter:image" content="https://TU-URL-DE-VERCEL/assets/logo.webp">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,6 +35,7 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="nav__links" id="navLinks">
+      <a href="#nosotros" data-accent="nosotros">Quiénes somos</a>
       <a href="#fitness" data-accent="fitness">Fitness</a>
       <a href="#taekwondo" data-accent="taekwondo">Taekwondo</a>
       <a href="#spa" data-accent="spa">Spa</a>
@@ -64,6 +78,57 @@
   </a>
 </section>
 
+  <!-- ============ QUIÉNES SOMOS ============ -->
+  <section class="block block--about" id="nosotros">
+    <div class="block__arc" aria-hidden="true"></div>
+    <div class="block__inner">
+      <p class="block__eyebrow">Quiénes somos</p>
+      <h2 class="block__title">Somos una familia ligada al deporte</h2>
+      <p class="block__lede">
+        Tajana nació de una familia para la que el deporte es un estilo de vida: el funcional, el taekwondo
+        y el running nos atraviesan a todos. De ahí surgió la idea de abrir un espacio propio para
+        compartir eso con el barrio.
+      </p>
+
+      <div class="card card--wide">
+        <p style="margin:0 0 16px; font-size:1.05rem; line-height:1.6;">
+          Somos un gimnasio de barrio, no una cadena. Eso significa seguimiento personalizado real: conocemos
+          a cada alumno, su punto de partida y sus objetivos, y adaptamos las clases a eso. La cercanía y la
+          calidad humana son, para nosotros, tan importantes como la técnica.
+        </p>
+        <ul class="tag-list">
+          <li>Cercanía real con el alumno</li>
+          <li>Seguimiento personalizado</li>
+          <li>Ambiente familiar</li>
+          <li>Calidad humana</li>
+        </ul>
+      </div>
+
+      <div class="grid-2" style="margin-top:20px;">
+        <div class="card card--profile">
+          <div class="profile">
+            <img src="assets/ana.jpeg" alt="Ana Maria Cuesta" class="profile__avatar">
+            <div>
+              <p class="profile__name">Ana Maria Cuesta</p>
+              <p class="profile__role">Instructora de Musculación y Personal Trainer certificada en CEAFI Group</p>
+              <p class="profile__role">Instructora de GAP, Localizada, Fitness grupal y Entrenamiento Funcional</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card--profile">
+          <div class="profile">
+            <img src="assets/luis.jpeg" alt="Luis Murgan" class="profile__avatar">
+            <div>
+              <p class="profile__name">Luis Murgan</p>
+              <p class="profile__role">Cinturón Negro, IV DAN</p>
+              <p class="profile__role">Instructor de Musculación y Personal Trainer certificado en CEAFI Group</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FITNESS ============ -->
   <section class="block block--fitness" id="fitness">
     <div class="block__arc" aria-hidden="true"></div>
@@ -71,18 +136,19 @@
       <p class="block__eyebrow">Fitness</p>
       <h2 class="block__title">Musculación &amp; clases grupales</h2>
       <p class="block__lede">
-        Sala equipada con pesas libres, máquinas y espacio funcional para entrenar a tu ritmo o sumarte a las clases grupales.
+        El fuerte de la sala es el entrenamiento funcional en grupo, pensado para acompañar a cada alumno
+        sin importar el punto de partida. También estamos capacitados para dar musculación, CrossFit y
+        otras disciplinas para quien busca algo más específico.
       </p>
 
       <div class="grid-2">
         <div class="card">
           <h3 class="card__title">Horarios</h3>
+          <p class="schedule__days">Lunes, miércoles y viernes · clases de 1 hora</p>
           <table class="schedule">
-            <tr><td>Lunes Miercoles viernes</td><td>09:00-
-                                                    15:00-
-                                                    18:00-19:00-20:00-21:00</td></tr>
-            <tr><td>Sábados</td><td>Cerrado</td></tr>
-            <tr><td>Domingos</td><td>Cerrado</td></tr>
+            <tr><td>Turno mañana</td><td>09:00</td></tr>
+            <tr><td>Turno tarde</td><td>15:00</td></tr>
+            <tr><td>Turno noche</td><td>18:00 · 19:00 · 20:00 · 21:00</td></tr>
           </table>
         </div>
 
@@ -103,11 +169,26 @@
       <div class="card card--wide">
         <h3 class="card__title">Clases</h3>
         <ul class="tag-list">
+          <li>Funcional grupal</li>
           <li>Musculación</li>
-          <li>Funcional</li>
-          <li>Clases grupales</li>
-          <li>Atencion Personalizada</li>
+          <li>CrossFit</li>
+          <li>Entrenamiento personalizado</li>
         </ul>
+      </div>
+
+      <div class="card card--wide">
+        <h3 class="card__title">Galería</h3>
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Foto anterior">‹</button>
+          <div class="carousel__track">
+            <img src="assets/IMG-20260730-WA0015.jpg" alt="Alumnos entrenando con pesas y kettlebells en Tajana Fitness" class="carousel__item">
+            <img src="assets/IMG-20260730-WA0019.jpg" alt="Grupo de alumnos de Tajana Fitness" class="carousel__item">
+            <img src="assets/IMG-20260730-WA0038.jpg" alt="Alumnos de Tajana Fitness en la sala" class="carousel__item">
+            <img src="assets/IMG-20260730-WA0043.jpg" alt="Grupo de alumnos de Tajana Fitness" class="carousel__item">
+            <img src="assets/IMG-20260730-WA0046.jpg" alt="Alumnas de Tajana Fitness" class="carousel__item">
+          </div>
+          <button class="carousel__btn carousel__btn--next" aria-label="Foto siguiente">›</button>
+        </div>
       </div>
     </div>
   </section>
@@ -153,12 +234,39 @@
       </div>
 
       <div class="card card--wide">
-        <h3 class="card__title">Niveles</h3>
-        <ul class="tag-list">
+        <h3 class="card__title">El camino del cinturón</h3>
+        <p class="block__lede" style="margin-bottom:20px; max-width:100%;">
+          Como en cualquier arte marcial, en Tajana se empieza desde lo más básico y se va avanzando con
+          constancia, grado a grado, hasta el cinturón negro.
+        </p>
+        <ul class="belt-path">
+          <li class="belt belt--white">Blanco</li>
+          <li class="belt belt--yellow">Amarillo</li>
+          <li class="belt belt--green">Verde</li>
+          <li class="belt belt--blue">Azul</li>
+          <li class="belt belt--red">Rojo</li>
+          <li class="belt belt--black">Negro</li>
+        </ul>
+        <ul class="tag-list" style="margin-top:20px;">
           <li>Iniciación</li>
           <li>Preparación para examen de grado</li>
           <li>Competencia</li>
         </ul>
+      </div>
+
+      <div class="card card--wide">
+        <h3 class="card__title">Galería</h3>
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Foto anterior">‹</button>
+          <div class="carousel__track">
+            <img src="assets/IMG-20260730-WA0013.jpg" alt="Instructores y alumnos graduados de Taekwondo Tajana" class="carousel__item">
+            <img src="assets/IMG-20260730-WA0014.jpg" alt="Alumnos de Taekwondo Tajana con el instructor Luis Murgan" class="carousel__item">
+            <img src="assets/IMG-20260730-WA0020.jpg" alt="Grupo de alumnos de Taekwondo Tajana" class="carousel__item">
+            <img src="assets/IMG-20260730-WA0040.jpg" alt="Clase de Taekwondo Tajana en pleno entrenamiento" class="carousel__item">
+            <img src="assets/IMG-20260730-WA0047.jpg" alt="Alumnos de Taekwondo Tajana celebrando" class="carousel__item">
+          </div>
+          <button class="carousel__btn carousel__btn--next" aria-label="Foto siguiente">›</button>
+        </div>
       </div>
     </div>
   </section>
@@ -279,8 +387,8 @@
         </a>
       </p>
       <p>
-        <a href="https://instagram.com/tajanafitness" target="_blank" rel="noopener">
-          📷 @tajanafitness
+        <a href="https://www.instagram.com/tajana.fitness" target="_blank" rel="noopener">
+          📷 @tajana.fitness
         </a>
       </p>
     </div>
@@ -305,7 +413,7 @@
     <a href="https://wa.me/5491166145338" target="_blank" rel="noopener" class="floating-btn floating-btn--whatsapp" aria-label="Escribinos por WhatsApp">
       <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.36.65 4.56 1.79 6.45L4 29l7.73-1.75a11.9 11.9 0 0 0 4.28.79h.01c6.63 0 12.01-5.38 12.01-12.01C28.03 8.38 22.65 3 16.01 3zm0 21.8h-.01a9.7 9.7 0 0 1-4.95-1.36l-.35-.21-4.59 1.04 1.06-4.47-.23-.36a9.72 9.72 0 0 1-1.5-5.19c0-5.38 4.39-9.76 9.78-9.76 2.61 0 5.07 1.02 6.91 2.87a9.68 9.68 0 0 1 2.86 6.9c0 5.39-4.39 9.77-9.78 9.77-.03 0-.05 0 0 0zm5.36-7.32c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.96-.93 1.16-.17.2-.34.22-.63.07-.29-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.59-.91-2.18-.24-.57-.48-.5-.66-.5-.17-.01-.37-.01-.56-.01-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44s1.05 2.83 1.19 3.03c.15.2 2.06 3.15 5 4.41.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.74-.71 1.98-1.4.25-.68.25-1.27.17-1.4-.07-.12-.26-.19-.55-.34z"/></svg>
     </a>
-    <a href="https://instagram.com/tajanafitness" target="_blank" rel="noopener" class="floating-btn floating-btn--instagram" aria-label="Seguinos en Instagram">
+    <a href="https://www.instagram.com/tajana.fitness" target="_blank" rel="noopener" class="floating-btn floating-btn--instagram" aria-label="Seguinos en Instagram">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
     </a>
   </div>
