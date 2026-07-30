@@ -17,3 +17,18 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 // Año del footer
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Carruseles de fotos (Fitness / Taekwondo)
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track = carousel.querySelector('.carousel__track');
+  const prev = carousel.querySelector('.carousel__btn--prev');
+  const next = carousel.querySelector('.carousel__btn--next');
+  const scrollAmount = () => carousel.querySelector('.carousel__item').clientWidth + 12;
+
+  prev.addEventListener('click', () => {
+    track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+  });
+  next.addEventListener('click', () => {
+    track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+  });
+});
